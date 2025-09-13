@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make My Dream Holiday - Book Your Trip</title>
+  <meta name="description" content="Book your dream holidays with Puran Chand. Himachal, Manali, Shimla, Delhi, luxury and adventure packages!">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <h1>Make My Dream Holiday</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Explore Beautiful Places with Puran Chand</h2>
+    <p>Book your dream holiday today!</p>
+    <a href="#packages" class="btn">View Packages</a>
+  </section>
+  <section id="destinations" class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="cards" id="destinationsContainer"></div>
+  </section>
+  <section id="packages" class="packages">
+    <h2>Tour Packages</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/hotel1.jpg" alt="Hotel Shimla">
+        <h3>Shimla Tour</h3>
+        <p>Duration: 3 Days / 2 Nights</p>
+        <p>Hotel: Pinewood Resort</p>
+        <p>Price: ₹8,500 per person</p>
+        <a href="#" class="btn" onclick="bookPackage('Shimla Tour')">Book Now</a>
+      </div>
+      <div class="card">
+        <img src="images/hotel2.jpg" alt="Hotel Manali">
+        <h3>Manali Tour</h3>
+        <p>Duration: 4 Days / 3 Nights</p>
+        <p>Hotel: Snow Peak Hotel</p>
+        <p>Price: ₹12,000 per person</p>
+        <a href="#" class="btn" onclick="bookPackage('Manali Tour')">Book Now</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" method="POST" action="/contact">
+      <input type="hidden" name="package" id="packageField">
+      <input type="text" name="name" placeholder="Your Name" required/><br>
+      <input type="email" name="email" placeholder="Your Email" required/><br>
+      <input type="text" name="phone" placeholder="Phone Number" required/><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Make My Dream Holiday | Owner: Puran Chand</p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
